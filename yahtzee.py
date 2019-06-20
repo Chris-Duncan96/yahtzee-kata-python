@@ -69,7 +69,7 @@ class Yahtzee:
     def find_dice_which_repeats_times(times, *dice):
         tallies = Yahtzee.get_tallies(*dice)
         for i in range(6):
-            if (tallies[i] == times):
+            if (tallies[i] >= times):
                 return i + 1
         return 0
 

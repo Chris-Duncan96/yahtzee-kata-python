@@ -1,6 +1,5 @@
-from yahtzee import Yahtzee
 from unittest import TestCase
-
+from yahtzee import Yahtzee
 
 class YahtzeeTest(TestCase):
 
@@ -58,12 +57,12 @@ class YahtzeeTest(TestCase):
     def test_three_of_a_kind(self):
         self.assertEqual(9, Yahtzee.three_of_a_kind(3, 3, 3, 4, 5))
         self.assertEqual(15, Yahtzee.three_of_a_kind(5, 3, 5, 4, 5))
-        self.assertEqual(0, Yahtzee.three_of_a_kind(3, 3, 3, 3, 5))
+        self.assertEqual(9, Yahtzee.three_of_a_kind(3, 3, 3, 3, 5))
 
-    def test_four_of_a_knd(self):
+    def test_four_of_a_kind(self):
         self.assertEqual(12, Yahtzee.four_of_a_kind(3, 3, 3, 3, 5))
         self.assertEqual(20, Yahtzee.four_of_a_kind(5, 5, 5, 4, 5))
-        self.assertEqual(0, Yahtzee.three_of_a_kind(3, 3, 3, 3, 3))
+        self.assertEqual(0, Yahtzee.four_of_a_kind(3, 1, 2, 3, 3))
 
     def test_smallStraight(self):
         self.assertEqual(15, Yahtzee.smallStraight(1, 2, 3, 4, 5))
